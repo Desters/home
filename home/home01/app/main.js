@@ -1,8 +1,8 @@
 const home1_1 = () => {
-    const width = prompt('Введите ширину офиса в метрах');          //Ширина
-    const height = prompt('Введите высоту офиса в метрах');         //Выоста
-    const lenght = prompt('Введите длинну офиса в метрах');         //Длинна
-    if (width <= 1000 && height <= 1000 && lenght <= 1000) {          //Не больше 1000
+    const width = prompt('Введите ширину офиса в метрах',Number());          //Ширина
+    const height = prompt('Введите высоту офиса в метрах',Number());         //Выоста
+    const lenght = prompt('Введите длинну офиса в метрах',Number());         //Длинна
+    if ((width > 0 && width <= 1000) && (height > 0 && height <= 1000) && (lenght > 0 && lenght <= 1000)) {          //Не больше 1000
         const S = ((width * height) * 2) + ((lenght * height) * 2);                 //Определение квадратуры команты в метрах.
         const bucketColor = Math.ceil(S / 16);                              //Считаем сколько нужно краски. Окруляем с большую сторону
         console.log(`Чтобы покрасить ${S} метров квадратных, необходимо закупить ${bucketColor} банок краски`);
