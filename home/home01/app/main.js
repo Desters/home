@@ -16,7 +16,7 @@ const home1_2 = () => {
     const m1 = [];                    //Массив который хранит ценность золотиго песка всех видов
     const m2 = [];                    //Массив который хранит значение вместительности ёмкостей
     for (let index = 1; index <= 6; index++) {          //заполнение
-        index <=3 ? m1.push(+prompt(`Введите стоимость ${index} го вида`)) : m2.push(+prompt(`Сколько килограмм в ${index}ю ёмкость?`)) ;
+        index <= 3 ? m1.push(+prompt(`Введите стоимость ${index} го вида`)) : m2.push(+prompt(`Сколько килограмм в ${index}ю ёмкость?`));
     }
     //Сортируем массивы
     m1.sort((a, b) => { return a - b });
@@ -32,10 +32,7 @@ const home1_2 = () => {
 const home1_3 = () => {
     const happyTicket = prompt('Введите номер вашего билетика');            //Спрашиваем у пользователя номер его билета
     //Поскольку строка это массив из символов, сравниваем сумму первых трех символов с последними тремя сиволами.
-    if (happyTicket[0] + happyTicket[1] + happyTicket[2] == happyTicket[3] + happyTicket[4] + happyTicket[5]) {
-        console.log("YES");         //Вывод если билет счасливый
-    }
-    else {
-        console.log("NO");          //Вывод если билет не счасливый
-    }
+    const res = happyTicket[0] + happyTicket[1] + happyTicket[2] == happyTicket[3] + happyTicket[4] + happyTicket[5];
+    res ? console.log("YES") : console.log("NO");
+}
 }
