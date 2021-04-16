@@ -1,4 +1,4 @@
-    //Task1
+//Task1
 const sumMin = () => {
     const m = +prompt('Enter meaning N'),       //Спрашиваю m
         n = +prompt('Enter meaning M'),         //Спрашиваю n
@@ -17,16 +17,11 @@ const sumMin = () => {
     console.log(myArray);
     console.log(`Sum of minimum array elements ${sum}`);
 }
-    //Task2
-const twoOldestAges = (data) => {
-    //Создаю переменные которые будут хранить результат работы фун-и.
-    let first = Number.MIN_VALUE,
-        second = Number.MIN_VALUE;
-    for (let i = 0; i < data.length; i++) { first <= data[i] ? first = data[i] : null; }  //Цикл который находит первое максимально число
-    for (let i = 0; i < data.length; i++) { second <= data[i] && first != data[i] ? second = data[i] : null; }//Цикл который находит число пере максимальным
-    return [first, second].sort();
-}
-    //Task3
+//Task2
+const twoOldestAges = (getArray) => {
+    getArray.sort((a, b) => { return b - a; })
+    return [getArray[0], getArray[1]];}
+//Task3
 const shortestWord = (str) => {
     /*Создаю переменные для работы:
     start будет хранить индекс первого символа слова
@@ -36,16 +31,16 @@ const shortestWord = (str) => {
     */
     let start = 0,
         end = 0,
-        myString = str+=' ';
-        myLenght = myString.length;
+        myString = str += ' ';
+    myLenght = myString.length;
     /*Цикл будет постоянно переберать слова от пробело до пробела. Когда определяется слово, смотрим сколько внутри него символов. 
     Если кол-во символов меньше чем у прошлого слова, перезаписываем значение в переменную*/
     for (let char = 0; char < myString.length; char++) {
-        if (str[char] != ' '){
+        if (str[char] != ' ') {
             end++;
         } else {
             myLenght > end - start ? myLenght = end - start : start = end;
         }
     }
-    return(myLenght);
+    return (myLenght);
 }
