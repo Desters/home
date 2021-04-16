@@ -35,4 +35,3 @@ const home1_3 = () => {
     const res = happyTicket[0] + happyTicket[1] + happyTicket[2] == happyTicket[3] + happyTicket[4] + happyTicket[5];
     res ? console.log("YES") : console.log("NO");
 }
-}
