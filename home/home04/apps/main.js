@@ -57,7 +57,6 @@ const ipsBetween = (start, end) => {
     //Преобразование строки в массив из запись в переменную.
     let StartIp = start.split('.'), EndIp = end.split('.');
     //Преобразование всех элементов массива в числа.
-    StartIp = StartIp.map((el) => +el);
     EndIp = EndIp.map((el) => +el);
     //Создал свой массив который будет хранить результаты вычислений активного диапазона.
     const elemArr = [
